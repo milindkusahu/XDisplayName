@@ -8,7 +8,11 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFullName(`${firstName} ${lastName}`);
+    if (firstName && lastName) {
+      setFullName(`${firstName} ${lastName}`);
+    } else {
+      setFullName("");
+    }
   };
 
   return (
@@ -36,29 +40,8 @@ const App = () => {
           <button type="submit">Submit</button>
         </form>
       </div>
-      {fullName ? <p>Full Name: {fullName}</p> : ""}
+      {fullName && <p>Full Name: {fullName}</p>}
     </div>
-    // <div
-    //   style={{
-    //     display: "flex",
-    //     flexDirection: "column",
-    //     justifyContent: "center",
-    //     alignItems: "center",
-    //   }}
-    // >
-    //   <h1>Full Name Display</h1>
-    //   <div>
-    //     <div>
-    //       <span>First Name:</span> <input type="text" />
-    //     </div>
-    //     <br />
-    //     <div>
-    //       <span>Last Name:</span> <input type="text" />
-    //     </div>
-    //     <br />
-    //     <button>Submit</button>
-    //   </div>
-    // </div>
   );
 };
 
