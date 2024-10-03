@@ -37,9 +37,11 @@ const App = () => {
         </label>
         <button type="submit">Submit</button>
       </form>
-      <div id="full-name-display">
-        {fullName && <p>Full Name: {fullName}</p>}
-      </div>
+      {fullName && (
+        <div id="full-name-display">
+          <p>Full Name: {fullName}</p>
+        </div>
+      )}
     </div>
   );
 };
