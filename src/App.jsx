@@ -33,7 +33,7 @@ const App = () => {
               onChange={(e) => setLastName(e.target.value)}
             />
           </label>
-          <input type="submit" />
+          <button type="submit">Submit</button>
         </form>
       </div>
       {fullName ? <p>Full Name: {fullName}</p> : ""}
