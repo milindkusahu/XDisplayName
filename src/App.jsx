@@ -25,6 +25,7 @@ const App = () => {
             <input
               type="text"
               required
+              value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
             />
           </label>
@@ -34,6 +35,7 @@ const App = () => {
             <input
               type="text"
               required
+              value={lastName}
               onChange={(e) => setLastName(e.target.value)}
             />
           </label>
