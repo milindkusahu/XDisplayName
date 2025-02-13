@@ -17,39 +17,38 @@ const DisplayName = () => {
   return (
     <div>
       <h1>Full Name Display</h1>
-      <div>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="firstName">First Name:</label>
-            <input
-              id="firstName"
-              onChange={(e) =>
-                setName((prevName) => ({
-                  ...prevName,
-                  firstName: e.target.value,
-                }))
-              }
-              type="text"
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="lastName">Last Name:</label>
-            <input
-              id="lastName"
-              onChange={(e) =>
-                setName((prevName) => ({
-                  ...prevName,
-                  lastName: e.target.value,
-                }))
-              }
-              type="text"
-              required
-            />
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="firstName">First Name:</label>
+          <input
+            id="firstName"
+            onChange={(e) =>
+              setName((prevName) => ({
+                ...prevName,
+                firstName: e.target.value,
+              }))
+            }
+            type="text"
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="lastName">Last Name:</label>
+          <input
+            id="lastName"
+            onChange={(e) =>
+              setName((prevName) => ({
+                ...prevName,
+                lastName: e.target.value,
+              }))
+            }
+            type="text"
+            required
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
       {isSubmitted && <p>Full Name: {fullName}</p>}
     </div>
   );
